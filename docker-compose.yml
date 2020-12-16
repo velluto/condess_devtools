@@ -1,0 +1,21 @@
+version: "2"
+services:
+  webapp:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - ./htdocs:/var/www/htdocs_live
+      - ./templates:/var/www/templates
+    networks:
+      - velluto-dev-network
+    environment:
+      - DEVELOPMENT_MODE=true
+      - PRNET_ENDPOINT=http://prnet_app_1:3001
+  
+
+networks:
+  velluto-dev-network:
+    external:
+      name: vellutoui_velluto-dev-network
+      
