@@ -5,8 +5,8 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./htdocs:/var/www/htdocs_live
-      - ./templates:/var/www/templates
+      - ./htdocs:/var/www/htdocs_live:ro
+      - ./templates:/var/www/templates:ro
     networks:
       - velluto-dev-network
     environment:
