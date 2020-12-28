@@ -7,7 +7,15 @@ services:
     volumes:
       - ./htdocs:/var/www/htdocs_live:ro
       - ./templates:/var/www/templates:ro
+    networks:
+      - velluto-dev-network
     environment:
       - DEVELOPMENT_MODE=true
-      - PRNET_ENDPOINT
+      - PRNET_ENDPOINT=http://prnet_app_1:3001
   
+
+networks:
+  velluto-dev-network:
+    external:
+      name: vellutoui_velluto-dev-network
+      
