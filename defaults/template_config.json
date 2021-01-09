@@ -1,0 +1,101 @@
+{
+  "available_options": {
+    "header_string": {
+      "type": "text",
+      "default": ""
+    },
+    "content": {
+      "type": "text",
+      "default": ""
+    },
+    "city": {
+      "type": "text",
+      "default": ""
+    },
+    "city_full_name": {
+      "type": "text",
+      "default": ""
+    },
+    "city_name": {
+      "type": "text",
+      "default": ""
+    },
+    "template": {
+      "type": "text",
+      "default": ""
+    },
+    "feed_id": {
+      "type": "single_feed",
+      "default": ""
+    },
+    "feed_ids": {
+      "type": "feed_list",
+      "default": []
+    },
+    "feed_ids_left": {
+      "type": "feed_list",
+      "default": []
+    },
+    "feed_ids_right": {
+      "type": "feed_list",
+      "default": []
+    },
+    "home_anchor": {
+      "type": "text",
+      "default": ""
+    },
+    "post_limit": {
+      "type": "text",
+      "default": "8"
+    },
+    "post_limit_left": {
+      "type": "text",
+      "default": "8"
+    },
+    "post_limit_right": {
+      "type": "text",
+      "default": "8"
+    },
+    "randomize": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobile_only": {
+      "type": "boolean",
+      "default": false
+    },
+    "hide_on_mobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "truncate_length": {
+      "type": "text",
+      "default": ""
+    }
+  },
+  "presets": {
+    "single_block": {
+      "header_string": null,
+      "feed_ids": [],
+      "post_limit": 8
+    },
+    "dual_block": {
+      "header_string": null,
+      "feed_id_left": [],
+      "feed_id_right": [],
+      "post_limit_left": 8,
+      "post_limit_right": 8
+    },
+    "custom": {
+      "header_string": null,
+      "content": null
+    },
+    "link_collection": {
+      "header_string": null,
+      "feed_ids": [],
+      "home_anchor": null
+    },
+    "none": {}
+  },
+  "components": {}
+}

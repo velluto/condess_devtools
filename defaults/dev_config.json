@@ -1,0 +1,42 @@
+{
+  "config": {
+    "site_name": "Condess Devtools",
+    "site_url": "host.condessdev.com",
+    "site_domain": "host.condessdev.com",
+    "contact_email": "test@condessdev.com",
+    "logo_url": "https://via.placeholder.com/125.png",
+    "logo_type": "png",
+    "show_ad_blocks": "placeholder",
+    "full_id": "01456464aecbc62e",
+    "partial_id": "01456464ae"
+  },
+  "images": {},
+  "location": {},
+  "nearby_sites": [],
+  "sitemaps": [],
+  "feeds": {},
+  "strings": {
+    "ts_home_link": "Home",
+    "ts_pr_link": "Additional News",
+    "ts_footer_contact": "Questions?  Contact us at {{site_config.contact_email}}",
+    "ts_sidebar_title": "Featured Stories",
+    "ts_quick_links": "Quick Links",
+    "ts_popular_posts": "Popular Posts"
+  },
+  "template": {},
+  "snippets": {
+    "footer": [],
+    "header": [],
+    "category": [],
+    "sidebar": [],
+    "single": [],
+    "front_page": [],
+    "source_index": [],
+    "article": [],
+    "navbar": []
+  },
+  "assets": [],
+  "page_body_top_content": "",
+  "page_body_bottom_content": "",
+  "page_head_content": ""
+}
