@@ -20,6 +20,8 @@ if [ -d "htdocs/$DEV_HOST" ]; then
   exit 1
 fi
 
+echo "Copying default configuration files."
+
 if [ ! -f "$REPOSITORY_PATH/dev_config.json" ]; then
   cp defaults/dev_config.json $REPOSITORY_PATH
 fi
@@ -28,7 +30,7 @@ if [ ! -f "$REPOSITORY_PATH/template_config.json" ]; then
   cp defaults/template_config.json $REPOSITORY_PATH
 fi
 
-echo "Linking dev host"
+echo "Linking dev host."
 (cd htdocs && ln -s ../$REPOSITORY_PATH $DEV_HOST)
 
 twig_folders=( handlers components layouts sections )
