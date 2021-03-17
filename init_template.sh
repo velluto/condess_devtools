@@ -7,18 +7,14 @@ if [ $# -ne 2 ];then
   exit 1
 fi
 
-DEV_HOST=$1
-REPOSITORY_PATH="templates/$2"
+REPOSITORY_PATH="$2"
 
 if [ ! -d "$REPOSITORY_PATH" ]; then
-  echo "Error:  Repository Path $2 does not exist.  Please make sure it's in the 'templates' subdirectory."
+  echo "Error:  Repository Path $2 does not exist.  "
   exit 1
 fi
 
-if [ -d "htdocs/$DEV_HOST" ]; then
-  echo "Error:  Development host $DEV_HOST already exists."
-  exit 1
-fi
+./link_repository.sh $1 $2
 
 echo "Copying default configuration files."
 
@@ -30,8 +26,7 @@ if [ ! -f "$REPOSITORY_PATH/template_config.json" ]; then
   cp defaults/template_config.json $REPOSITORY_PATH
 fi
 
-echo "Linking dev host."
-(cd htdocs && ln -s ../$REPOSITORY_PATH $DEV_HOST)
+cp defaults/htaccess $REPOSITORY_PATH/.htaccess
 
 twig_folders=( handlers components layouts sections )
 for i in "${twig_folders[@]}"

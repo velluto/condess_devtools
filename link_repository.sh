@@ -8,21 +8,18 @@ if [ $# -ne 2 ];then
 fi
 
 DEV_HOST=$1
-REPOSITORY_PATH="templates/$2"
+REPOSITORY_PATH="$2"
 
 if [ ! -d "$REPOSITORY_PATH" ]; then
-  echo "Error:  Repository Path $2 does not exist.  Please make sure it's in the 'templates' subdirectory."
+  echo "Error:  Repository Path $2 does not exist. "
   exit 1
 fi
 
 if [ -d "htdocs/$DEV_HOST" ]; then
   echo "Development host $DEV_HOST already exists, doing nothing."
-  exit 1
+else
+  echo "Linking dev host"
+  (cd htdocs && ln -s ../$REPOSITORY_PATH $DEV_HOST)
 fi
-
-echo "Linking dev host"
-
-(cd htdocs && ln -s ../$REPOSITORY_PATH $DEV_HOST)
-
 
 echo "Done"
