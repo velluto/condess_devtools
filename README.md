@@ -1,9 +1,5 @@
 # Devtools Overview
 
-# Template Development
-
-## Overview
-
 ## How The System Functions
 
 Fundamentally the Condess System works like a standard web server.  It can serve static files, but it is primarily designed to serve dynamic content through arbitrary templates.
